@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import android.widget.Toolbar;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.navigation.NavigationView;
 
 public class Mainpage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,26 +25,20 @@ private DrawerLayout drawerLayout;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
         androidx.appcompat.widget.Toolbar toolbar=findViewById(R.id.toolbar);
-       setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
+
         drawerLayout=findViewById(R.id.drawerlayout);
-
-       ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
-
-       drawerLayout.addDrawerListener(toggle);
-       toggle.syncState();
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
 
 
-    }/*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigatio_menu, menu);
-        return true;
-    }*/
+    }
+
 
     @Override
     public void onBackPressed() {

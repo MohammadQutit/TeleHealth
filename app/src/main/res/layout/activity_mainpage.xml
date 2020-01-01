@@ -14,23 +14,47 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="end"
         >
+
         <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:id="@+id/toolbar"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:background="#62B8B7"
+            android:background="@drawable/toolbar"
             android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            >
+           >
+
+            <TextView
+                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:text="TeleHealth"
+                android:textSize="15sp"
+                android:layout_gravity="end"
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="end"
+
+                android:paddingBottom="3dp"
+                android:layout_marginEnd="5dp"
+                />
+
+
+
+
             <FrameLayout
                 android:id="@+id/Fragment_Conatainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
 
         </androidx.appcompat.widget.Toolbar>
-
 
 
     </LinearLayout>
