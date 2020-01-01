@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Mainpage"
     android:id="@+id/drawerlayout"
+    tools:openDrawer="start"
 
     >
 
@@ -14,20 +15,40 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-        <TextView
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="56dp"
+            android:id="@+id/toolbar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:background="#62B8B7"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            >
+            <FrameLayout
+                android:id="@+id/Fragment_Conatainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
 
 
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:menu="@menu/navigatio_menu"
         android:layout_gravity="start"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/userinfo"
+        app:menu="@menu/navigatio_menu"
         >
 
 
     </com.google.android.material.navigation.NavigationView>
+
+
+
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
