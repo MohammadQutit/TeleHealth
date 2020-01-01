@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/eee"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="190dp"
+        >
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="40dp"/>
+
+        <EditText
+            android:id="@+id/ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="17sp"
+            android:textColorHint="@color/Black"
+            android:textColor="@color/Black"
+            android:hint="Email"
+            android:padding="20dp"
+            android:elevation="10dp"
+            android:drawableEnd="@drawable/ic_email_black_24dp"
+            android:drawablePadding="20dp"
+            android:shadowColor="#99a7b3c6"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="1.5"
+            android:background="@color/White"
+            android:nextFocusDown="@id/Password"
+            />
+
+
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="17sp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/Black"
+            android:textColor="@color/Black"
+            android:hint="Password"
+            android:padding="20dp"
+            android:elevation="10dp"
+            android:drawableEnd="@drawable/ic_lock_black_24dp"
+            android:drawablePadding="20dp"
+            android:shadowColor="#99a7b3c6"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="1.5"
+            android:background="@color/White"
+            />
+        <CheckBox
+            android:id="@+id/stay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Remember"
+            android:layout_marginTop="20dp"
+            android:textSize="17sp"
+            android:layout_marginLeft="20dp"
+            />
+
+
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:text="LOGIN"
+            android:textColor="@color/whiteTextColor"
+            android:elevation="10dp"
+            android:shadowColor="#99a7b3c6"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="1.5"
+            android:background="#62B8B7"
+            android:onClick="onClickLogin"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/underline"
+            android:textColor="@color/Black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:onClick="onClickRegHere"
+
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

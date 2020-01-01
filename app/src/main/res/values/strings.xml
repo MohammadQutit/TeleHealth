@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TeleHealth</string>
+    <string name="underline"><u><b>Register Here</b></u></string>
+    <string name="Remember">
+        <b>Remember Me</b>
+    </string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>
