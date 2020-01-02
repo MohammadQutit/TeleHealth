@@ -12,10 +12,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="56dp"
         android:orientation="vertical"
         android:gravity="end"
         >
+
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -50,14 +51,39 @@
 
 
             <FrameLayout
-                android:id="@+id/Fragment_Conatainer"
+                android:id="@+id/frag"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
+
 
         </androidx.appcompat.widget.Toolbar>
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        >
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/flibber"
+            android:layout_gravity="center_horizontal"
+            >
+
+
+        </ViewFlipper>
+
+
+
+
+
+    </LinearLayout>
+
+
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
