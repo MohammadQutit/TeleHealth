@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
@@ -25,6 +26,7 @@ public class Mainpage extends AppCompatActivity implements NavigationView.OnNavi
 private DrawerLayout drawerLayout;
 private int image[]={R.drawable.slide1,R.drawable.slide2,R.drawable.slide3,R.drawable.slide4};
 private  ViewFlipper viewFlipper;
+private TextView username;
 Bundle b;
 DatabaseReference DB;
 String name;
@@ -36,11 +38,15 @@ String name;
         setSupportActionBar(toolbar);
         viewFlipper=findViewById(R.id.flibber);
         drawerLayout=findViewById(R.id.drawerlayout);
+        username=findViewById(R.id.UsernameInMP);
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        //Intent i=getIntent();
+        //username.setText(i.getStringExtra("email"));
+
         for(int img:image){
             change(img);
         }
