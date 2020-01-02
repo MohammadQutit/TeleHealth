@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +28,7 @@ DatabaseReference DB;
 EditText id,pass;
 String acc,password;
 ProgressDialog load;
+Bundle b;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -54,26 +56,36 @@ ProgressDialog load;
     {
       acc=id.getText().toString();
       password=pass.getText().toString();
+      if(!TextUtils.isEmpty(acc))
+      {
+        if(!TextUtils.isEmpty(password))
+        {
+            DB.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.child("Users").child(acc).exists()) {
+                        if (dataSnapshot.child("Users").child(acc).child("password").getValue().equals(password)) {
+                            load.show();
+                            i = new Intent(MainActivity.this, Mainpage.class);
+                            b.putString("email",acc);
+                            i.putExtras(b);
+                            startActivity(i);
+                        } else
+                            Toast.makeText(getApplicationContext(), "your passwod is wrong", Toast.LENGTH_SHORT).show();
+                        ;
+                    } else
+                        Toast.makeText(getApplicationContext(), "your id is invalid", Toast.LENGTH_SHORT).show();
+                    ;
+                }
 
-      DB.addListenerForSingleValueEvent(new ValueEventListener() {
-          @Override
-          public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-              if(dataSnapshot.child("Users").child(acc).exists())
-              {
-                  if(dataSnapshot.child("Users").child(acc).child("password").getValue().equals(password))
-                  {
-                      load.show();
-                      i=new Intent(MainActivity.this,Mainpage.class);
-                      startActivity(i);
-                  }else Toast.makeText(getApplicationContext(),"your passwod is wrong",Toast.LENGTH_SHORT).show();;
-              }else Toast.makeText(getApplicationContext(),"your id is invalid",Toast.LENGTH_SHORT).show();;
-          }
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-          @Override
-          public void onCancelled(@NonNull DatabaseError databaseError) {
+                }
+            });
+        }else{Toast.makeText(getApplicationContext(),"please enter your password",Toast.LENGTH_SHORT).show();}
 
-          }
-      });
+    }else{Toast.makeText(getApplicationContext(),"please enter your email",Toast.LENGTH_SHORT).show();}
 
 
 
