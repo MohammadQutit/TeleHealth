@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "646880691791",
-    "firebase_url": "https://telehealth-7a6b4.firebaseio.com",
-    "project_id": "telehealth-7a6b4",
-    "storage_bucket": "telehealth-7a6b4.appspot.com"
+    "project_number": "902974023080",
+    "firebase_url": "https://telehealth-1c4b8.firebaseio.com",
+    "project_id": "telehealth-1c4b8",
+    "storage_bucket": "telehealth-1c4b8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:646880691791:android:3f44857bf96cf8fead8c3a",
+        "mobilesdk_app_id": "1:902974023080:android:daa8b46e0e2935419de99d",
         "android_client_info": {
           "package_name": "com.example.telehealth"
         }
       },
       "oauth_client": [
         {
-          "client_id": "646880691791-b9i0o0bm6f5hosrrtqb8d280r1a89k3r.apps.googleusercontent.com",
+          "client_id": "902974023080-1tqhk9t4lk0bt27i2ul1ngkcvcvqa8pb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.telehealth",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "646880691791-s1v67ch7plj4cghoopaltf0o68nkkmo3.apps.googleusercontent.com",
+          "client_id": "902974023080-gh2qe9h36b4300muvkgu1vcvnt8n1rob.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyByaQ8nYrhYvDYaAjX22BNe9DW737zRJ-Y"
+          "current_key": "AIzaSyBBfdMD8QdoFrndLiCJSuOCI4XEWrN4zj0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "646880691791-s1v67ch7plj4cghoopaltf0o68nkkmo3.apps.googleusercontent.com",
+              "client_id": "902974023080-gh2qe9h36b4300muvkgu1vcvnt8n1rob.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
