@@ -1,5 +1,6 @@
 package com.example.telehealth;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
@@ -8,17 +9,36 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity
 {
 Intent i;
+DatabaseReference DB;
+EditText id,pass;
+String acc,password;
+ProgressDialog load;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        DB= FirebaseDatabase.getInstance().getReference();
+        id=(EditText)findViewById(R.id.ID);
+        pass=(EditText)findViewById(R.id.Password);
+        load=new ProgressDialog(this);
+        load.setTitle("access to mainpage");
+        load.setMessage("please wait a moment");
+        load.setCanceledOnTouchOutside(false);
 
     }
 
@@ -32,10 +52,30 @@ Intent i;
     }
     public void onClickLogin(View v)
     {
+      acc=id.getText().toString();
+      password=pass.getText().toString();
+
+      DB.addListenerForSingleValueEvent(new ValueEventListener() {
+          @Override
+          public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+              if(dataSnapshot.child("Users").child(acc).exists())
+              {
+                  if(dataSnapshot.child("Users").child(acc).child("password").getValue().equals(password))
+                  {
+                      load.show();
+                      i=new Intent(MainActivity.this,Mainpage.class);
+                      startActivity(i);
+                  }else Toast.makeText(getApplicationContext(),"your passwod is wrong",Toast.LENGTH_SHORT).show();;
+              }else Toast.makeText(getApplicationContext(),"your id is invalid",Toast.LENGTH_SHORT).show();;
+          }
+
+          @Override
+          public void onCancelled(@NonNull DatabaseError databaseError) {
+
+          }
+      });
 
 
-        i=new Intent(this,Mainpage.class);
-        startActivity(i);
 
     }
 
