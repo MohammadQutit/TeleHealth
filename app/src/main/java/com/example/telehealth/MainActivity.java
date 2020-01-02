@@ -69,6 +69,7 @@ Bundle b;
                         if (dataSnapshot.child("Users").child(acc).child("password").getValue().equals(password)) {
                             load.show();
                             i = new Intent(MainActivity.this, Mainpage.class);
+                            b=new Bundle();
                             b.putString("email",acc);
                             i.putExtras(b);
                             startActivity(i);

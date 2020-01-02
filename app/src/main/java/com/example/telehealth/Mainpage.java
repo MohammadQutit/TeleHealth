@@ -30,6 +30,7 @@ private TextView username;
 Bundle b;
 DatabaseReference DB;
 String name;
+    Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +45,7 @@ String name;
         toggle.syncState();
         NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        //Intent i=getIntent();
-        //username.setText(i.getStringExtra("email"));
+         i=getIntent();
 
         for(int img:image){
             change(img);
@@ -57,7 +57,8 @@ String name;
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
-               name= dataSnapshot.child("Users").child(b.getString("email").toString()).child("name").getValue().toString();
+               name= dataSnapshot.child("Users").child(i.getStringExtra("email").toString()).child("full name").getValue().toString();
+
 
             }
 
