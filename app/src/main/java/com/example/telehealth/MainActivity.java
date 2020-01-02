@@ -54,28 +54,37 @@ ProgressDialog load;
     }
     public void onClickLogin(View v)
     {
-      acc=id.getText().toString();
-      password=pass.getText().toString();
 
-      DB.addListenerForSingleValueEvent(new ValueEventListener() {
-          @Override
-          public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-              if(dataSnapshot.child("Users").child(acc).exists())
-              {
-                  if(dataSnapshot.child("Users").child(acc).child("password").getValue().equals(password))
-                  {
-                      load.show();
-                      i=new Intent(MainActivity.this,Mainpage.class);
-                      startActivity(i);
-                  }else Toast.makeText(getApplicationContext(),"your passwod is wrong",Toast.LENGTH_SHORT).show();;
-              }else Toast.makeText(getApplicationContext(),"your id is invalid",Toast.LENGTH_SHORT).show();;
-          }
+              acc=id.getText().toString();
+              password=pass.getText().toString();
 
-          @Override
-          public void onCancelled(@NonNull DatabaseError databaseError) {
 
-          }
-      });
+                  DB.addListenerForSingleValueEvent(new ValueEventListener() {
+                      @Override
+                      public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                          if (dataSnapshot.child("Users").child(acc).exists()) {
+                              if (dataSnapshot.child("Users").child(acc).child("password").getValue().equals(password)) {
+                                  load.show();
+                                  i = new Intent(MainActivity.this, Mainpage.class);
+                                  startActivity(i);
+                              } else
+                                  Toast.makeText(getApplicationContext(), "your passwod is wrong", Toast.LENGTH_SHORT).show();
+                              ;
+                          } else
+                              Toast.makeText(getApplicationContext(), "your id is invalid", Toast.LENGTH_SHORT).show();
+                          ;
+                      }
+
+                      @Override
+                      public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                      }
+                  });
+
+
+
+
+
 
 
 
