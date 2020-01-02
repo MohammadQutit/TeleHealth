@@ -42,6 +42,8 @@ Bundle b;
         load.setMessage("please wait a moment");
         load.setCanceledOnTouchOutside(false);
 
+
+
     }
 
     public void onClickRegHere(View v)

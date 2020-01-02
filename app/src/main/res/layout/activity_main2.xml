@@ -11,6 +11,7 @@
         android:layout_height="56dp"
         android:text="TeleHealth"
         android:textSize="20sp"
+        android:elevation="5dp"
         android:textColor="@color/White"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/toolbar"/>
