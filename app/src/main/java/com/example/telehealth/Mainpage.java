@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -59,6 +60,8 @@ String name;
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
                name= dataSnapshot.child("Users").child(i.getStringExtra("phone").toString()).child("full name").getValue().toString();
+              TextView textView=findViewById(R.id.UserMP);
+              textView.setText(name);
 
 
             }
@@ -92,7 +95,6 @@ String name;
                 startActivity(intent);
                 break;
             case R.id.nav_logout:
-
                 Intent i=new Intent(Mainpage.this,MainActivity.class);
                 startActivity(i);
                 break;
