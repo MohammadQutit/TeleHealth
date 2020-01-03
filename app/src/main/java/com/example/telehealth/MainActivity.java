@@ -73,7 +73,7 @@ Bundle b;
                             load.show();
                             i = new Intent(MainActivity.this, Mainpage.class);
                             b=new Bundle();
-                            b.putString("email",acc);
+                            b.putString("phone",acc);
                             i.putExtras(b);
                             startActivity(i);
                         } else

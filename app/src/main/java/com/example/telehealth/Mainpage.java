@@ -58,7 +58,7 @@ String name;
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
-               name= dataSnapshot.child("Users").child(i.getStringExtra("email").toString()).child("full name").getValue().toString();
+               name= dataSnapshot.child("Users").child(i.getStringExtra("phone").toString()).child("full name").getValue().toString();
 
 
             }
