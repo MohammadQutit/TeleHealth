@@ -89,7 +89,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_marginStart="20dp"
                     android:elevation="5dp"
-                    android:src="@drawable/ssss"
+                    android:src="@drawable/dise"
                     />
                 <TextView
                     android:layout_width="150dp"
@@ -110,7 +110,7 @@
                    android:layout_alignParentRight="true"
                     android:layout_marginEnd="20dp"
                     android:elevation="5dp"
-                    android:src="@drawable/ssss" />
+                    android:src="@drawable/dise" />
 
                 <TextView
                     android:layout_width="150dp"
