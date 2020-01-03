@@ -89,7 +89,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_marginStart="20dp"
                     android:elevation="5dp"
-                    android:src="@drawable/ssss"
+                    android:src="@drawable/dise1"
                     />
                 <TextView
                     android:layout_width="150dp"
@@ -98,7 +98,7 @@
                     android:textColor="@color/Black"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="20dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="40dp"
                     android:textAlignment="center"
 
                     />
@@ -110,7 +110,7 @@
                    android:layout_alignParentRight="true"
                     android:layout_marginEnd="20dp"
                     android:elevation="5dp"
-                    android:src="@drawable/ssss" />
+                    android:src="@drawable/dise" />
 
                 <TextView
                     android:layout_width="150dp"
