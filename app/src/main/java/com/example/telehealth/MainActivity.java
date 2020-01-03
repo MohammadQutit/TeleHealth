@@ -76,11 +76,11 @@ Bundle b;
                             load.show();
                             i = new Intent(MainActivity.this, Mainpage.class);
                             b=new Bundle();
-                            b.putString("email",acc);
+                            b.putString("phone",acc);
                             i.putExtras(b);
                             startActivity(i);
                         } else
-                            Toast.makeText(getApplicationContext(), "your passwod is wrong", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "your password is wrong", Toast.LENGTH_SHORT).show();
                         ;
                     } else
                         Toast.makeText(getApplicationContext(), "your id is invalid", Toast.LENGTH_SHORT).show();
