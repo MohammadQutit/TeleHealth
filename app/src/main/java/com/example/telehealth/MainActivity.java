@@ -130,6 +130,7 @@ boolean checked;
       //  startActivity(i);
 
       prefe();
+
       acc=id.getText().toString();
       password=pass.getText().toString();
 
