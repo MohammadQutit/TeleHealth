@@ -59,7 +59,10 @@ Bundle b;
     }
     public void onClickLogin(View v)
     {
-      acc=id.getText().toString();
+        i = new Intent(MainActivity.this, Mainpage.class);
+        startActivity(i);
+
+      /*acc=id.getText().toString();
       password=pass.getText().toString();
       if(!TextUtils.isEmpty(acc))
       {
@@ -95,6 +98,6 @@ Bundle b;
 
 
 
-    }
+   */ }
 
 }
