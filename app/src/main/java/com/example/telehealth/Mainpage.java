@@ -26,8 +26,8 @@ public class Mainpage extends AppCompatActivity implements NavigationView.OnNavi
 private DrawerLayout drawerLayout;
 private int image[]={R.drawable.slide1,R.drawable.slide2,R.drawable.slide3,R.drawable.slide4};
 private  ViewFlipper viewFlipper;
-private TextView username;
-Bundle b;
+
+
 DatabaseReference DB;
 String name;
     Intent i;
@@ -39,7 +39,6 @@ String name;
         setSupportActionBar(toolbar);
         viewFlipper=findViewById(R.id.flibber);
         drawerLayout=findViewById(R.id.drawerlayout);
-        username=findViewById(R.id.UsernameInMP);
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -47,11 +46,12 @@ String name;
         navigationView.setNavigationItemSelectedListener(this);
          i=getIntent();
 
+
         for(int img:image){
             change(img);
         }
         DB= FirebaseDatabase.getInstance().getReference();
-        b=getIntent().getExtras();
+
         DB.addListenerForSingleValueEvent(new ValueEventListener()
         {
             @Override

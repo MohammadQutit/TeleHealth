@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +35,8 @@ Bundle b;
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         DB= FirebaseDatabase.getInstance().getReference();
         id=(EditText)findViewById(R.id.ID);
         pass=(EditText)findViewById(R.id.Password);
