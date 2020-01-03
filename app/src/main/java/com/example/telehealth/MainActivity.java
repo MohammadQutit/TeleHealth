@@ -77,7 +77,7 @@ Bundle b;
                             i.putExtras(b);
                             startActivity(i);
                         } else
-                            Toast.makeText(getApplicationContext(), "your passwod is wrong", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "your password is wrong", Toast.LENGTH_SHORT).show();
                         ;
                     } else
                         Toast.makeText(getApplicationContext(), "your id is invalid", Toast.LENGTH_SHORT).show();

@@ -179,7 +179,7 @@ public class Register extends AppCompatActivity
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"this"+e+"is already exists",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"this phone number"+ph+"is already exists",Toast.LENGTH_SHORT).show();
                     load.dismiss();
                 }
             }
