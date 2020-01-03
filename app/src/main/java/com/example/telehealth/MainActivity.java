@@ -37,6 +37,7 @@ ProgressDialog load;
 SharedPreferences reme;
 Bundle b;
 boolean checked;
+Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -48,6 +49,7 @@ boolean checked;
         id=(EditText)findViewById(R.id.ID);
         pass=(EditText)findViewById(R.id.Password);
         rem=(CheckBox)findViewById(R.id.stay);
+        button=findViewById(R.id.login);
 
         reme=getSharedPreferences("myapp",MODE_PRIVATE);
         getPrefe();
@@ -105,7 +107,9 @@ boolean checked;
         if (reme.contains("checked"))
         {
             rem.setChecked(reme.getBoolean("checked",false));
+            button.callOnClick();
         }
+
     }
 
     public void prefe()
