@@ -111,6 +111,7 @@ boolean checked;
     public void prefe()
     {
 
+<<<<<<< HEAD
         if(rem.isChecked())
         {
             checked=rem.isChecked();
@@ -129,6 +130,9 @@ boolean checked;
       //  i = new Intent(MainActivity.this, Mainpage.class);
       //  startActivity(i);
       prefe();
+=======
+
+>>>>>>> 98a5c59b3104f8a9d4ac3361579b70a76080d5aa
       acc=id.getText().toString();
       password=pass.getText().toString();
 
@@ -181,7 +185,11 @@ boolean checked;
       }else{Toast.makeText(getApplicationContext(),"please enter your phone number",Toast.LENGTH_SHORT).show();}
 
 
+<<<<<<< HEAD
 
     }
+=======
+   }
+>>>>>>> 98a5c59b3104f8a9d4ac3361579b70a76080d5aa
 
 }

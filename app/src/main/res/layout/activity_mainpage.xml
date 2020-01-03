@@ -94,7 +94,7 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="List of Diseas"
+                    android:text="List of Conditions"
                     android:textColor="@color/Black"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="20dp"

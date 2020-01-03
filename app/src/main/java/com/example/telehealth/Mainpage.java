@@ -51,23 +51,23 @@ String name;
         for(int img:image){
             change(img);
         }
-       // DB= FirebaseDatabase.getInstance().getReference();
+        DB= FirebaseDatabase.getInstance().getReference();
 
-        //DB.addListenerForSingleValueEvent(new ValueEventListener()
-       // {
-           // @Override
-           // public void onDataChange(@NonNull DataSnapshot dataSnapshot)
-           // {
-             ///  name= dataSnapshot.child("Users").child(i.getStringExtra("email").toString()).child("full name").getValue().toString();
+        DB.addListenerForSingleValueEvent(new ValueEventListener()
+        {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
+               name= dataSnapshot.child("Users").child(i.getStringExtra("phone").toString()).child("full name").getValue().toString();
 
 
-           // }
+            }
 
-           // @Override
-          //  public void onCancelled(@NonNull DatabaseError databaseError) {
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-           // }
-       // });
+            }
+        });
 
 
 
