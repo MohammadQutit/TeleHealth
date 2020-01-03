@@ -29,6 +29,7 @@ private  ViewFlipper viewFlipper;
 
 
 DatabaseReference DB;
+DatabaseReference d;
 String name;
     Intent i;
     @Override
@@ -89,7 +90,11 @@ String name;
             case R.id.nav_about:
                 Intent intent=new Intent(this,Main2Activity.class);
                 startActivity(intent);
+                break;
+            case R.id.nav_logout:
 
+                Intent i=new Intent(Mainpage.this,MainActivity.class);
+                startActivity(i);
                 break;
         }
 
