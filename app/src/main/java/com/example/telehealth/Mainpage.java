@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +29,7 @@ public class Mainpage extends AppCompatActivity implements NavigationView.OnNavi
 private DrawerLayout drawerLayout;
 private int image[]={R.drawable.slide1,R.drawable.slide2,R.drawable.slide3,R.drawable.slide4};
 private  ViewFlipper viewFlipper;
+private ImageButton conditions;
 
 
 DatabaseReference DB;
@@ -41,6 +44,7 @@ String name;
         setSupportActionBar(toolbar);
         viewFlipper=findViewById(R.id.flibber);
         drawerLayout=findViewById(R.id.drawerlayout);
+
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -115,6 +119,11 @@ drawerLayout.closeDrawer(GravityCompat.START);
         viewFlipper.setInAnimation(this,android.R.anim.slide_in_left);
         viewFlipper.setOutAnimation(this,android.R.anim.slide_out_right);
 
+
+    }
+    public void conditionOpen(View view){
+        Intent i=new Intent(this, com.example.telehealth.conditions.class);
+        startActivity(i);
 
     }
 }
