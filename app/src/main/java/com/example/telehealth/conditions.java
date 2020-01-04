@@ -7,9 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ThemedSpinnerAdapter;
 import android.widget.Toast;
@@ -29,13 +32,15 @@ public class conditions extends AppCompatActivity {
    private DatabaseReference all=firebaseDatabase.getReference();
    private DatabaseReference conditions=all.child("conditions");
    private ListView listView;
+    private ArrayAdapter<String>arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conditions);
         listView=findViewById(R.id.list);
-        final ArrayAdapter<String>arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,names);
+        final EditText filter=findViewById(R.id.filter);
+        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,names);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -44,6 +49,25 @@ public class conditions extends AppCompatActivity {
 
             }
         });
+        filter.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                arrayAdapter.getFilter().filter(s);
+                arrayAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
 
         conditions.addChildEventListener(new ChildEventListener() {
             @Override
@@ -79,21 +103,9 @@ public class conditions extends AppCompatActivity {
     }
     private void choosecondition(int pos){
         Intent i=new Intent(this,pdfviewer.class);
-        i.putExtra("key",names.get(pos));
-        Toast.makeText(this,names.get(pos),Toast.LENGTH_LONG).show();
-        Thread thread=new Thread(){
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(4000);
+        i.putExtra("key",arrayAdapter.getItem(pos));
+        Toast.makeText(this,arrayAdapter.getItem(pos),Toast.LENGTH_LONG).show();
 
-                }catch (Exception e){
-
-                }
-
-            }
-        };
-        thread.start();
         startActivity(i);
 
     }
