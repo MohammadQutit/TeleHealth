@@ -29,8 +29,9 @@ public class Mainpage extends AppCompatActivity implements NavigationView.OnNavi
 private DrawerLayout drawerLayout;
 private int image[]={R.drawable.slide1,R.drawable.slide2,R.drawable.slide3,R.drawable.slide4};
 private  ViewFlipper viewFlipper;
-private ImageButton conditions;
+private ImageButton conditions,center;
 
+Intent i2;
 
 DatabaseReference DB;
 DatabaseReference d;
@@ -44,6 +45,7 @@ String name;
         setSupportActionBar(toolbar);
         viewFlipper=findViewById(R.id.flibber);
         drawerLayout=findViewById(R.id.drawerlayout);
+        center=(ImageButton)findViewById(R.id.center);
 
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
@@ -51,6 +53,7 @@ String name;
         NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
          i=getIntent();
+         getmap();
 
 
         for(int img:image){
@@ -83,6 +86,8 @@ String name;
     }
 
 
+
+
     @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
@@ -107,6 +112,21 @@ String name;
 
 drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void getmap()
+    {
+
+        center.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+               i2=new Intent(Mainpage.this,MapsActivity.class);
+               startActivity(i2);
+            }
+        });
+
     }
 
 
