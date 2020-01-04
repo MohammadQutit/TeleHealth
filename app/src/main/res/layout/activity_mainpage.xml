@@ -82,14 +82,15 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/Diseas"
+                    android:id="@+id/conditions"
                     android:layout_marginTop="40dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_alignParentLeft="true"
                     android:layout_marginStart="20dp"
                     android:elevation="5dp"
-                    android:src="@drawable/dise2"
+                    android:src="@drawable/cond"
+                    android:onClick="conditionOpen"
                     />
                 <TextView
                     android:layout_width="150dp"
@@ -104,18 +105,19 @@
                     />
 
                 <ImageButton
+                    android:id="@+id/early"
                     android:layout_marginTop="40dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                    android:layout_alignParentRight="true"
                     android:layout_marginEnd="20dp"
                     android:elevation="5dp"
-                    android:src="@drawable/dise1" />
+                    android:src="@drawable/early" />
 
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="List of Diseas"
+                    android:text="Early Screening"
                     android:textColor="@color/Black"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
@@ -144,19 +146,19 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:id="@+id/Diseas1"
+                    android:id="@+id/listot"
                     android:layout_marginTop="40dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_alignParentLeft="true"
                     android:layout_marginStart="20dp"
                     android:elevation="5dp"
-                    android:src="@drawable/dise2"
+                    android:src="@drawable/ot"
                     />
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="List of Diseas"
+                    android:text="List of OT"
                     android:textColor="@color/Black"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="20dp"
@@ -166,18 +168,19 @@
                     />
 
                 <ImageButton
+                    android:id="@+id/center"
                     android:layout_marginTop="40dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginEnd="20dp"
                     android:elevation="5dp"
-                    android:src="@drawable/dise2" />
+                    android:src="@drawable/center" />
 
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="List of Diseas"
+                    android:text="Centers"
                     android:textColor="@color/Black"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
