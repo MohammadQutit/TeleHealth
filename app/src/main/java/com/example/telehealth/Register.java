@@ -101,31 +101,43 @@ public class Register extends AppCompatActivity
 
     public void ValidationAcc()
     {
-        if(valideEmail==true)
+        if(!TextUtils.isEmpty(fullname.getText().toString()))
         {
-            if(validePhone==true)
-            {
-                if(validePassword==true)
-                {
-                    if(cpass==true)
-                    {
-                        if(valideDay==true)
-                        {
-                            if(valideMonth==true)
-                            {
-                                if(!TextUtils.isEmpty(year.getText()))
-                                {
 
-                                    load.show();
-                                    createAcc();
 
-                                }else {Toast.makeText(getApplicationContext(),"fill year field",Toast.LENGTH_SHORT).show();}
-                            }else {Toast.makeText(getApplicationContext(),"enter a name of month",Toast.LENGTH_SHORT).show();}
-                        }else {Toast.makeText(getApplicationContext(),"enter a day of month",Toast.LENGTH_SHORT).show();}
-                    }else {Toast.makeText(getApplicationContext(),"confirmed password is wrong",Toast.LENGTH_SHORT).show();}
-                }else {Toast.makeText(getApplicationContext(),"invalid password",Toast.LENGTH_SHORT).show();}
-            }else {Toast.makeText(getApplicationContext(),"invalid phone number",Toast.LENGTH_SHORT).show();}
-        }else {Toast.makeText(getApplicationContext(),"invalid email address",Toast.LENGTH_SHORT).show();}
+            if (valideEmail == true) {
+                if (validePhone == true) {
+                    if (validePassword == true) {
+                        if (cpass == true) {
+                            if (valideDay == true) {
+                                if (valideMonth == true) {
+                                    if (!TextUtils.isEmpty(year.getText())) {
+
+                                        load.show();
+                                        createAcc();
+
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "fill year field", Toast.LENGTH_SHORT).show();
+                                    }
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "enter a name of month", Toast.LENGTH_SHORT).show();
+                                }
+                            } else {
+                                Toast.makeText(getApplicationContext(), "enter a day of month", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(getApplicationContext(), "confirmed password is wrong", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "invalid password", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(), "invalid phone number", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(getApplicationContext(), "invalid email address", Toast.LENGTH_SHORT).show();
+            }
+        }else{ Toast.makeText(getApplicationContext(), "Please enter your full name", Toast.LENGTH_SHORT).show(); }
 
     }
 
