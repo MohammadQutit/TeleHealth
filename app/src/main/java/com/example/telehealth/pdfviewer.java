@@ -3,6 +3,7 @@ package com.example.telehealth;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.webkit.WebView;
@@ -24,16 +25,23 @@ import java.net.URLEncoder;
 
 public class pdfviewer extends AppCompatActivity {
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private Intent i;
 
     private WebView webView;
     DatabaseReference databaseReference = database.getReference();
-    DatabaseReference childReference= databaseReference.child("conditions").child("Autism-spectrum-disorder");
+    DatabaseReference childReference;
+
+
     private  String pdf;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdfviewer);
+        i=getIntent();
+        childReference= databaseReference.child("conditions").child(i.getStringExtra("key").toString());
+
         webView=findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
@@ -46,6 +54,8 @@ public class pdfviewer extends AppCompatActivity {
 
 
     }
+
+
 
     @Override
     protected void onStart() {
