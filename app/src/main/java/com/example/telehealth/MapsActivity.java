@@ -103,7 +103,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         MarkerOptions bet=new MarkerOptions().position(new LatLng(31.698354, 35.199712))
                 .title("Bethlehem Association for Rehabilitation")
-                .snippet("Manager:admond shehada"+"\n"+"022744053");
+                .snippet("Manager:admond shehada"+"\n"+"Fax:022744053");
         mMap.addMarker(bet);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(jenin));
