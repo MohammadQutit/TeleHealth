@@ -83,7 +83,7 @@
 
                 <ImageButton
                     android:id="@+id/conditions"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="30dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_alignParentLeft="true"
@@ -105,7 +105,7 @@
 
                 <ImageButton
                     android:id="@+id/early"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="30dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                    android:layout_alignParentRight="true"
@@ -146,7 +146,7 @@
 
                 <ImageButton
                     android:id="@+id/listot"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="30dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_alignParentLeft="true"
@@ -167,7 +167,7 @@
 
                 <ImageButton
                     android:id="@+id/center"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="30dp"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_alignParentRight="true"
