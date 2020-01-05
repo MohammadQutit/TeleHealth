@@ -64,7 +64,15 @@ public class pdfviewer extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 pdf=dataSnapshot.getValue(String.class);
-                webView.loadUrl("http://drive.google.com/viewerng/viewer?embedded=true&url="+pdf);
+
+                try {
+
+                    String x=URLEncoder.encode(pdf);
+                    webView.loadUrl("http://drive.google.com/viewerng/viewer?embedded=true&url="+x);
+                }catch (Exception e){
+
+                }
+
 
 
             }

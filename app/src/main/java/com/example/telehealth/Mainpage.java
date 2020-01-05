@@ -46,6 +46,13 @@ String name;
         viewFlipper=findViewById(R.id.flibber);
         drawerLayout=findViewById(R.id.drawerlayout);
         center=(ImageButton)findViewById(R.id.center);
+        conditions=(ImageButton)findViewById(R.id.conditions);
+        conditions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                conditionOpen();
+            }
+        });
 
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
@@ -141,9 +148,10 @@ drawerLayout.closeDrawer(GravityCompat.START);
 
 
     }
-    public void conditionOpen(View view){
+    private void conditionOpen(){
         Intent i=new Intent(this, com.example.telehealth.conditions.class);
         startActivity(i);
 
     }
+
 }

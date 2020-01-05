@@ -104,8 +104,6 @@ public class conditions extends AppCompatActivity {
     private void choosecondition(int pos){
         Intent i=new Intent(this,pdfviewer.class);
         i.putExtra("key",arrayAdapter.getItem(pos));
-        Toast.makeText(this,arrayAdapter.getItem(pos),Toast.LENGTH_LONG).show();
-
         startActivity(i);
 
     }

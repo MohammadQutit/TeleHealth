@@ -5,8 +5,13 @@
     >
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/milestone"
+            android:id="@+id/nav_at"
+            android:enabled="true"
+            android:title="Assessment tools"/>
+        <item
+            android:id="@+id/nav_milestone"
             android:enabled="true"
             android:title="Develop millestones" />
         <item
