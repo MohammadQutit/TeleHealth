@@ -107,7 +107,7 @@ String name;
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
             case R.id.nav_about:
-                Intent intent=new Intent(this,Main2Activity.class);
+                Intent intent=new Intent(this,AboutUs.class);
                 startActivity(intent);
                 break;
             case R.id.nav_logout:

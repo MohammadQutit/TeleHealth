@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:text="
+TeleOT is an application that features information about the conditions
+that affects pediatrics daily performance.
+
+Also it features assessments tools, intervention plans ,assistive
+technology and health tips, a way for communicating with specialist, assistive technology companies.
+
+Furthermore our app will provide the most recent articles on disabilities that could limit a child's performance.
+
+There's also a blog also caregivers can rate each specialist and the app.
+we designed an app to facilitate help to caregivers and students practitioners in understanding and managing children with disabilities.
+
+we aim to create a portable treatment.
+"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="14sp">
+
+
+    </TextView>
+
+</LinearLayout>
