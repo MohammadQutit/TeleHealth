@@ -160,6 +160,7 @@ boolean checked;
                             i.putExtras(b);
 
                             startActivity(i);
+                            finish();
 
                         }
                         else

@@ -113,7 +113,17 @@ String name;
             case R.id.nav_logout:
                 Intent i=new Intent(Mainpage.this,MainActivity.class);
                 startActivity(i);
+                finish();
                 break;
+            case R.id.nav_at:
+                Intent x=new Intent(Mainpage.this,at.class);
+                x.putExtra("key","Assessment-tools");
+                startActivity(x);
+            case R.id.nav_milestone:
+                Intent x1=new Intent(this,at.class);
+                x1.putExtra("key","DEVELOPMENT-OF-COGNITIVE-SKILLS");
+                startActivity(x1);
+
         }
 
 
