@@ -37,6 +37,8 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".conditions" />
         <activity android:name=".pdfviewer" />
+        <activity android:name=".Chat" />
+        <activity android:name=".Users" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

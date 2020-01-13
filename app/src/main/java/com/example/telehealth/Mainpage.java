@@ -29,7 +29,7 @@ public class Mainpage extends AppCompatActivity implements NavigationView.OnNavi
 private DrawerLayout drawerLayout;
 private int image[]={R.drawable.slide1,R.drawable.slide2,R.drawable.slide3,R.drawable.slide4};
 private  ViewFlipper viewFlipper;
-private ImageButton conditions,center;
+private ImageButton conditions,center,early;
 
 Intent i2;
 
@@ -46,6 +46,7 @@ String name;
         viewFlipper=findViewById(R.id.flibber);
         drawerLayout=findViewById(R.id.drawerlayout);
         center=(ImageButton)findViewById(R.id.center);
+        early=(ImageButton)findViewById(R.id.early);
         conditions=(ImageButton)findViewById(R.id.conditions);
         conditions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +62,7 @@ String name;
         navigationView.setNavigationItemSelectedListener(this);
          i=getIntent();
          getmap();
+         getchat();
 
 
         for(int img:image){
@@ -142,6 +144,22 @@ drawerLayout.closeDrawer(GravityCompat.START);
                i2=new Intent(Mainpage.this,MapsActivity.class);
                startActivity(i2);
             }
+        });
+
+    }
+
+    public void getchat()
+    {
+
+        early.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                i2=new Intent(Mainpage.this,Users.class);
+                startActivity(i2);
+            }
+
         });
 
     }
