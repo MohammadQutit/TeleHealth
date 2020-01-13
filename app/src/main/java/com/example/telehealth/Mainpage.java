@@ -29,9 +29,10 @@ public class Mainpage extends AppCompatActivity implements NavigationView.OnNavi
 private DrawerLayout drawerLayout;
 private int image[]={R.drawable.slide1,R.drawable.slide2,R.drawable.slide3,R.drawable.slide4};
 private  ViewFlipper viewFlipper;
-private ImageButton conditions,center,early;
+private ImageButton conditions,center,early,listot;
 
 Intent i2;
+
 
 DatabaseReference DB;
 DatabaseReference d;
@@ -47,6 +48,7 @@ String name;
         drawerLayout=findViewById(R.id.drawerlayout);
         center=(ImageButton)findViewById(R.id.center);
         early=(ImageButton)findViewById(R.id.early);
+        listot=(ImageButton)findViewById(R.id.listot);
         conditions=(ImageButton)findViewById(R.id.conditions);
         conditions.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,8 +78,10 @@ String name;
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
                name= dataSnapshot.child("Users").child(i.getStringExtra("phone").toString()).child("full name").getValue().toString();
-              TextView textView=findViewById(R.id.UserMP);
-              textView.setText(name);
+
+               UserDetails.username=name;
+               TextView textView=findViewById(R.id.UserMP);
+               textView.setText(name);
 
 
             }
@@ -151,7 +155,7 @@ drawerLayout.closeDrawer(GravityCompat.START);
     public void getchat()
     {
 
-        early.setOnClickListener(new View.OnClickListener()
+        listot.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)

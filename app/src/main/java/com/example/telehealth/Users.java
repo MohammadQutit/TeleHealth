@@ -28,7 +28,9 @@ public class Users extends AppCompatActivity
 {
     ListView usersList;
     TextView noUsersText;
+
     ArrayList<String> al = new ArrayList<>();
+
     int totalUsers = 0;
     ProgressDialog pd;
 
@@ -92,17 +94,16 @@ public class Users extends AppCompatActivity
         {
 
             JSONObject obj = new JSONObject(s);
-
             Iterator i = obj.keys();
             String key = "";
 
             while(i.hasNext())
             {
                 key = i.next().toString();
-
-                if(!key.equals(UserDetails.username))
+                JSONObject n= obj.getJSONObject(key);
+                if(!n.getString("full name").equals(UserDetails.username))
                 {
-                    al.add(key);
+                    al.add(n.getString("full name"));
                 }
                 totalUsers++;
             }

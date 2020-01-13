@@ -29,9 +29,13 @@ public class Chat extends AppCompatActivity
 {
     LinearLayout layout;
     RelativeLayout layout_2;
+
     ImageView sendButton;
+
     EditText messageArea;
+
     ScrollView scrollView;
+
     DatabaseReference reference1, reference2;
 
     @Override
@@ -42,9 +46,14 @@ public class Chat extends AppCompatActivity
 
         layout = (LinearLayout) findViewById(R.id.layout1);
         layout_2 = (RelativeLayout)findViewById(R.id.layout2);
+
         sendButton = (ImageView)findViewById(R.id.sendButton);
+
         messageArea = (EditText)findViewById(R.id.messageArea);
+
         scrollView = (ScrollView)findViewById(R.id.scrollView);
+
+
         reference1=FirebaseDatabase.getInstance().getReference().
                 child("messages").child(UserDetails.username+"_"+UserDetails.chatWith);
         reference2=FirebaseDatabase.getInstance().getReference().
@@ -71,6 +80,7 @@ public class Chat extends AppCompatActivity
                 }
             }
         });
+
 
         reference1.addChildEventListener(new ChildEventListener()
         {
