@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Early_Screening">
+
+    <TextView
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/Black"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please, Check the box if the symptoms are true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#62B8B7"/>
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="1.	Is missing milestones for his age."
+            android:textSize="14sp"
+            android:textColor="@color/Black"
+
+            />
+        <CheckBox
+            android:id="@+id/q1"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="2.	Falls down a lot or has trouble with stairs "
+            android:textSize="14sp"
+            android:textColor="@color/Black"
+
+            />
+        <CheckBox
+            android:id="@+id/q2"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="3.	Drools or has very unclear speech.   "
+            android:textSize="14sp"
+            android:textColor="@color/Black"
+
+            />
+        <CheckBox
+            android:id="@+id/q3"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:text="4.Can’t work simple toys (such as beg boards, simple puzzles, turning handle)."
+            android:textSize="14sp"
+            android:textColor="@color/Black"
+
+            />
+        <CheckBox
+            android:id="@+id/q4"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:text="5.	Doesn’t speak in sentences."
+            android:textSize="14sp"
+            android:textColor="@color/Black"
+
+            />
+        <CheckBox
+            android:id="@+id/q5"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:text="6.	Doesn’t understand simple instructions."
+            android:textSize="14sp"
+            android:textColor="@color/Black"
+
+            />
+        <CheckBox
+            android:id="@+id/q6"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="40dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:text="7.	Doesn’t play pretend or make- believe?"
+        android:textSize="14sp"
+        android:textColor="@color/Black"
+
+        />
+    <CheckBox
+        android:id="@+id/q7"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:text="8.	Doesn’t make eye contact."
+            android:textSize="14sp"
+            android:textColor="@color/Black"
+
+            />
+        <CheckBox
+            android:id="@+id/q8"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="20dp"
+        android:textColor="@color/White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#62B8B7"
+        android:text="Submit"/>
+
+
+
+
+
+
+
+
+</LinearLayout>
