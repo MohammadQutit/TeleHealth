@@ -55,6 +55,13 @@ String name;
             }
         });
 
+        early.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                screeningOpen();
+            }
+        });
+
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -151,16 +158,10 @@ drawerLayout.closeDrawer(GravityCompat.START);
     public void getchat()
     {
 
-        early.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                i2=new Intent(Mainpage.this,Users.class);
-                startActivity(i2);
-            }
 
-        });
+
+
+
 
     }
 
@@ -179,6 +180,14 @@ drawerLayout.closeDrawer(GravityCompat.START);
     private void conditionOpen(){
         Intent i=new Intent(this, com.example.telehealth.conditions.class);
         startActivity(i);
+
+    }
+
+    private void screeningOpen(){
+        Intent early=new Intent(this,Early_Screening.class);
+        early.putExtra("name",i.getStringExtra(name));
+        startActivity(early);
+
 
     }
 
